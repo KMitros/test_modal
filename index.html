@@ -10,9 +10,9 @@
     <title>popup</title>
 </head>
 <body>
-        <div class="butt-wrap">
-            <a href="#modal" class="buttonSign -signIn">Sign In</a>
-            <a href="#modal" class="buttonSign -signUp">Sign Up</a>
+        <div class="buttons-wrap">
+            <a href="#modal" class="button -signIn">Sign In</a>
+            <a href="#modal" class="button -signUp">Sign Up</a>
         </div>
         <div class="hidden">
             <div id="modal" class="modal">
@@ -22,33 +22,41 @@
                 </ul>
 
                 <div class="tab-item -logIn">
-                    <form class="form" id="form">
-                        <input class="formInput -mail" type="text" name="login" placeholder="E-mail">
-                        <input class="formInput -password" type="text" name="password" placeholder="Password">
+                    <form class="form">
+                        <input class="form-input -mail" minlength="3" type="text" name="login" placeholder="E-mail">
+                        <input  class="form-input -password " minlength="3" type="text" name="password" placeholder="Password">
                         <button class="hide">Hide</button>
                         <label class="check remember"><input type="checkbox" name="remember"> Remember me</label>
-                        <input class="buttSubmit" type="submit" value="Log in">
+                        <span class="error -mail">Uncorrect email</span>
+                        <span class="error -name">Uncorrect username</span>
+                        <input class="button-submit" type="button" value="Log in">
                     </form>
-                    <a class="linkRestorePass" href="#">Forgot your password?</a>
+                    <a class="link -restorePass" href="#">Forgot your password?</a>
                 </div>
 
                 <div class="tab-item -registr">
-                    <form class="form" id="form">
-                        <input class="formInput -name" type="text" name="name" placeholder="Username">
-                        <input class="formInput -mail" type="text" name="login" placeholder="E-mail">
-                        <input class="formInput -password" type="text" name="password" placeholder="Password">
+                    <form class="form">
+                        <input class="form-input -name" minlength="3" type="text" name="name" placeholder="Username">
+                        <input id="pass1" class="form-input -password" minlength="3" type="text" name="password" placeholder="Password">
                         <button class="hide">Hide</button>
-                        <label class="check agreeTerms"><input type="checkbox" name="remember"> I agree to the terms</label>
-                        <input class="buttSubmit" type="submit" value="Create account">
+                        <input id="pass2" class="form-input -confirmPass" minlength="3" type="text" name="confirmPassword" placeholder="Confirm password">
+                        <button class="hide -confirmPass">Hide</button>
+                        <input class="form-input -mail" type="text" name="login" placeholder="E-mail">
+                        <label class="check -agreeTerms"><input type="checkbox" name="remember"> I agree to the terms</label>
+                        <span class="error -mail">Uncorrect email</span>
+                        <span class="error -password">Uncorrect password</span>
+                        <span class="error -name">Uncorrect username</span>
+                        <input class="button-submit" type="button" value="Create account">
                     </form>
                 </div>
 
                 <div class="tab-item -restore">
-                    <form class="form" id="form">
-                        <input class="formInput -mail" type="text" name="login" placeholder="E-mail">
-                        <input class="buttSubmit" type="submit" value="Reset password">
+                    <form class="form">
+                        <input class="form-input -mail" type="text" name="login" placeholder="E-mail">
+                        <span class="error -mail">Uncorrect email</span>
+                        <input class="button-submit" type="button" value="Reset password">
                     </form>
-                    <a class="linkBackToLog" href="#">Back to log-in</a>
+                    <a class="link -backToLog" href="#">Back to log-in</a>
                 </div>
 
             </div>

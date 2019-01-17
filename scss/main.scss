@@ -21,30 +21,36 @@ body{
 .modal{
   position: relative;
   margin: 0 auto;
-  background-color: $white;
+  background-color: $color-white;
   max-width: 480px;
   border-radius: 3px;
 }
 
-.butt-wrap{
+.buttons-wrap{
   margin-top: 20px;
   width: auto;
 }
 
 .modal-tabs{
-  padding: 0;
-  margin: 0;
-  display: flex;
+  &{
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
   > .tab{
-    width: 100%;
-    padding: 20px;
-    cursor: pointer;
-    text-align: center;
-    background-color: $disable-tab;
-    border-radius: 3px;
-    list-style: none;
+    & {
+      width: 100%;
+      padding: 20px;
+      cursor: pointer;
+      text-align: center;
+      background-color: $disable-tab;
+      border-radius: 3px;
+      list-style: none;
+    }
+
     &.active{
-      background-color: $white;
+      background-color: $color-white;
     }
   }
 }
@@ -52,16 +58,19 @@ body{
 .modal{
   > .tab-item{
     position: relative;
-    > .linkRestorePass,.linkBackToLog{
+    > .link{
+      color: $color-white;
+    }
+    > .-restorePass{
       position: absolute;
       bottom: -30px;
       margin: 0 auto;
-      color: $white;
-    }
-    > .linkRestorePass{
       left: 25%;
     }
-    > .linkBackToLog{
+    > .-backToLog{
+      position: absolute;
+      bottom: -30px;
+      margin: 0 auto;
       left: 105px
     }
   }
