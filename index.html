@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="libs/Magmnific-popup/magnific-popup.css">
+    <title>popup</title>
+</head>
+<body>
+        <div class="butt-wrap">
+            <a href="#modal" class="buttonSign -signIn">Sign In</a>
+            <a href="#modal" class="buttonSign -signUp">Sign Up</a>
+        </div>
+        <div class="hidden">
+            <div id="modal" class="modal">
+                <ul class="modal-tabs">
+                    <li class="tab -signIn">Sign In</li>
+                    <li class="tab -registr">New Account</li>
+                </ul>
+
+                <div class="tab-item -logIn">
+                    <form class="form" id="form">
+                        <input class="formInput -mail" type="text" name="login" placeholder="E-mail">
+                        <input class="formInput -password" type="text" name="password" placeholder="Password">
+                        <button class="hide">Hide</button>
+                        <label class="check remember"><input type="checkbox" name="remember"> Remember me</label>
+                        <input class="buttSubmit" type="submit" value="Log in">
+                    </form>
+                    <a class="linkRestorePass" href="#">Forgot your password?</a>
+                </div>
+
+                <div class="tab-item -registr">
+                    <form class="form" id="form">
+                        <input class="formInput -name" type="text" name="name" placeholder="Username">
+                        <input class="formInput -mail" type="text" name="login" placeholder="E-mail">
+                        <input class="formInput -password" type="text" name="password" placeholder="Password">
+                        <button class="hide">Hide</button>
+                        <label class="check agreeTerms"><input type="checkbox" name="remember"> I agree to the terms</label>
+                        <input class="buttSubmit" type="submit" value="Create account">
+                    </form>
+                </div>
+
+                <div class="tab-item -restore">
+                    <form class="form" id="form">
+                        <input class="formInput -mail" type="text" name="login" placeholder="E-mail">
+                        <input class="buttSubmit" type="submit" value="Reset password">
+                    </form>
+                    <a class="linkBackToLog" href="#">Back to log-in</a>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="js/scripts.min.js"></script>
+        <script src="js/common.js"></script>
+</body>
+</html>

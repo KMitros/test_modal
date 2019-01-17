@@ -1,0 +1,75 @@
+@import "variables";
+@import "components/*";
+
+body{
+  min-width: 320px;
+  margin: 0;
+  height: auto;
+  position: relative;
+  text-align: center;
+  background-color: $main-bg-color;
+}
+
+.hidden{
+  display: none;
+}
+
+.mfp-close{
+    display: none !important;
+}
+
+.modal{
+  position: relative;
+  margin: 0 auto;
+  background-color: $white;
+  max-width: 480px;
+  border-radius: 3px;
+}
+
+.butt-wrap{
+  margin-top: 20px;
+  width: auto;
+}
+
+.modal-tabs{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  > .tab{
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: $disable-tab;
+    border-radius: 3px;
+    list-style: none;
+    &.active{
+      background-color: $white;
+    }
+  }
+}
+
+.modal{
+  > .tab-item{
+    position: relative;
+    > .linkRestorePass,.linkBackToLog{
+      position: absolute;
+      bottom: -30px;
+      margin: 0 auto;
+      color: $white;
+    }
+    > .linkRestorePass{
+      left: 25%;
+    }
+    > .linkBackToLog{
+      left: 105px
+    }
+  }
+}
+
+.tab-item{
+  display: none;
+  &.active{
+    display: block;
+  }
+}

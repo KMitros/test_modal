@@ -1,0 +1,26 @@
+.buttonSign{
+  margin-top: 15px;
+  padding: 7px 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid;
+  text-decoration: none;
+  color: $white;
+  transition: all .3s ease;
+  &.-signIn{
+    border-color: $white;
+    background-color: transparent;
+    &:hover{
+      background-color: $white;
+      color: $main-bg-color;
+    }
+  }
+  &.-signUp{
+    margin-left: 10px;
+    background-color: $button-bg;
+    border-color: $button-bg;
+    &:hover{
+      background-color: lighten($button-bg,10%);
+    }
+  }
+}

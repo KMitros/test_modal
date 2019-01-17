@@ -1,0 +1,37 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  padding: 23px 25px;
+  position: relative;
+  > .check{
+    align-self: start;
+    margin-bottom: 22px;
+  }
+  > .formInput{
+    padding: 12px 37px;
+    margin-bottom: 26px;
+    border: 1px solid $border-color;
+    &.-password{
+      margin-bottom: 21px;
+    }
+  }
+  > .hide{
+    display: block;
+    position: absolute;
+    height: 40px;
+    top: 92px;
+    right: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  > .buttSubmit{
+    margin-bottom: 5px;
+    padding: 10px 40px;
+    background-color: $button-bg;
+    border: 1px solid darken($button-bg,2%);
+    border-radius: 2px;
+    color: $white;
+    cursor: pointer;
+  }
+}
