@@ -12,10 +12,8 @@ $(document).ready(function(){
 
     $('form').submit(function(){
         let currentForm = $(this);
-        console.log(currentForm);
         let email = currentForm[0].mail;
         let name = currentForm[0].name;
-        console.log(name);
         let pass = currentForm[0].password;
         let confirmPass = currentForm[0].confirmPassword;
 

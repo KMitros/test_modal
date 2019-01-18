@@ -61,6 +61,7 @@ body{
   > .tab-item{
     position: relative;
     > .link{
+      font-size: 12px;
       color: $color-white;
       text-align: center;
     }
@@ -78,5 +79,11 @@ body{
   display: none;
   &.active{
     display: block;
+  }
+}
+
+.form{
+  > .error{
+    font-size: 14px;
   }
 }
