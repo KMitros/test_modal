@@ -58,6 +58,7 @@ body {
       text-align: center;
       background-color: $disable-tab;
       border-radius: 3px;
+      color: $font-color;
       list-style: none;
     }
 
@@ -93,6 +94,11 @@ body {
 }
 
 .form {
+  > .head{
+    color: $font-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   > .error {
     font-size: 14px;
   }

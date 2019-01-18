@@ -9,6 +9,7 @@
   > .check {
     align-self: start;
     margin-bottom: 22px;
+    color: $font-color;
   }
 
   > .form-input {
@@ -33,6 +34,7 @@
       right: 30px;
       border: none;
       background-color: transparent;
+      color: $font-color;
       cursor: pointer;
     }
 
