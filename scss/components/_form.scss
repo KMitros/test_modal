@@ -1,30 +1,30 @@
-.form{
-  &{
+.form {
+  & {
     display: flex;
     flex-direction: column;
     padding: 23px 25px;
     position: relative;
   }
 
-  > .check{
+  > .check {
     align-self: start;
     margin-bottom: 22px;
   }
 
-  > .form-input{
-    &{
+  > .form-input {
+    & {
       padding: 12px 37px;
       margin-bottom: 26px;
       border: 1px solid $border-color;
     }
 
-    &.-password{
+    &.-password {
       margin-bottom: 21px;
     }
   }
 
-  > .hide{
-    &{
+  > .hide {
+    & {
       display: block;
       position: absolute;
       height: 40px;
@@ -36,7 +36,7 @@
       cursor: pointer;
     }
 
-    &:before{
+    &:before {
       height: 50%;
       width: 0px;
       position: absolute;
@@ -48,12 +48,12 @@
       outline: none;
     }
 
-    &.-confirmPass{
+    &.-confirmPass {
       top: 154px
     }
   }
 
-  > .button-submit{
+  > .button-submit {
     margin-bottom: 5px;
     padding: 10px 40px;
     font-family: "Roboto",sans-serif;
@@ -64,7 +64,7 @@
     cursor: pointer;
   }
 
-  > .error{
+  > .error {
     display: none;
     border-radius: 2px;
     margin-bottom: 10px;

@@ -1,7 +1,5 @@
-.button{
- &{
-    margin-top: 15px;
-    padding: 3px 10px;
+.button {
+ & {
     border-radius: 15px;
     cursor: pointer;
     border: 1px solid;
@@ -10,26 +8,25 @@
     transition: all .3s ease;
  }
 
-  &.-signIn{
-    &{
+  &.-signIn {
+    & {
       border-color: $color-white;
       background-color: transparent;
     }
 
-    &:hover{
+    &:hover {
       background-color: $color-white;
       color: $main-bg-color;
     }
   }
 
-  &.-signUp{
-    &{
-      margin-left: 10px;
+  &.-signUp {
+    & {
       background-color: $button-bg;
       border-color: $button-bg;
   }
 
-    &:hover{
+    &:hover {
       background-color: lighten($button-bg,10%);
     }
   }

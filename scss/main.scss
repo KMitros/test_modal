@@ -2,7 +2,7 @@
 @import "fonts";
 @import "components/*";
 
-body{
+body {
   min-width: 320px;
   margin: 0;
   height: auto;
@@ -12,15 +12,15 @@ body{
   background-color: $main-bg-color;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.mfp-close{
+.mfp-close {
     display: none !important;
 }
 
-.modal{
+.modal {
   position: relative;
   margin: 0 auto;
   background-color: $color-white;
@@ -28,19 +28,29 @@ body{
   border-radius: 3px;
 }
 
-.buttons-wrap{
-  margin-top: 20px;
+.buttons-wrap {
+  & {margin-top: 20px;
   width: auto;
+  }
+
+  > .button{
+    margin-top: 15px;
+    padding: 3px 10px;
+
+    &.-signUp{
+      margin-left: 10px;
+    }
+  }
 }
 
-.modal-tabs{
+.modal-tabs {
   &{
     padding: 0;
     margin: 0;
     display: flex;
   }
 
-  > .tab{
+  > .tab {
     & {
       width: 100%;
       padding: 20px;
@@ -51,21 +61,21 @@ body{
       list-style: none;
     }
 
-    &.active{
+    &.active {
       background-color: $color-white;
     }
   }
 }
 
-.modal{
-  > .tab-item{
+.modal {
+  > .tab-item {
     position: relative;
-    > .link{
+    > .link {
       font-size: 12px;
       color: $color-white;
       text-align: center;
     }
-    > .-restorePass,.-backToLog{
+    > .-restorePass,.-backToLog {
       width: 300px;
       position: absolute;
       bottom: -30px;
@@ -75,15 +85,15 @@ body{
   }
 }
 
-.tab-item{
+.tab-item {
   display: none;
-  &.active{
+  &.active {
     display: block;
   }
 }
 
-.form{
-  > .error{
+.form {
+  > .error {
     font-size: 14px;
   }
 }
