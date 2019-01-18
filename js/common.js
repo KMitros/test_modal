@@ -23,13 +23,13 @@ $(document).ready(function(){
 
             if(pattern.test(email.value)){
 
-                $(".error.-mail").css({'display' : 'none'});
+                $(".error.-mail").addClass('hidden');
             }else{
-                $(".error.-mail").css({'display' : 'block'});
+                $(".error.-mail").removeClass('hidden');
                 return false;
             };
         }else{
-            $(".error.-mail").css({'display' : 'block'});
+            $(".error.-mail").removeClass('hidden');
             return false;
         };
 
@@ -39,13 +39,13 @@ $(document).ready(function(){
 
             if(name.value !== '') {
                 if(pattern.test(name.value)){
-                    $(".error.-name").css({'display' : 'none'});
+                    $(".error.-name").addClass('hidden');
                 }else{
-                    $(".error.-name").css({'display' : 'block'});
+                    $(".error.-name").removeClass('hidden');
                     return false
                 };
             }else{
-                $(".error.-name").css({'display' : 'block'});
+                $(".error.-name").removeClass('hidden');
                 return false;
             };
         };
@@ -56,14 +56,14 @@ $(document).ready(function(){
             if(pattern.test(pass.value)) {
                 if(pass != undefined && confirmPass != undefined){
                     if(pass.value === confirmPass.value){
-                        $(".error.-password").css({'display' : 'none'});
+                        $(".error.-password").addClass("hidden");
                     }else{
-                        $(".error.-password").css({'display' : 'block'});
+                        $(".error.-password").removeClass("hidden");
                         return false;
                     }
                 }
             }else{
-                $(".error.-password").css({'display' : 'block'});
+                $(".error.-password").removeClass("hidden");
                 return false;
             };
         }
@@ -92,6 +92,7 @@ $(document).ready(function(){
         $(this).addClass("active");
 
         $(".tab-item").eq($(this).index()).addClass("active");
+        $(".error").addClass("hidden");
     });
 
 
@@ -113,6 +114,7 @@ $(document).ready(function(){
         $(".modal").find(".active").removeClass('active');
         $(".tab.-signIn").toggleClass('active');
         $(".tab-item.-restore").toggleClass('active');
+        $(".error").addClass("hidden");
     });
 
 
