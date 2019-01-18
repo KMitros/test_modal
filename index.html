@@ -22,39 +22,39 @@
                 </ul>
 
                 <div class="tab-item -logIn">
-                    <form class="form">
-                        <input class="form-input -mail" minlength="3" type="text" name="login" placeholder="E-mail">
-                        <input  class="form-input -password " minlength="3" type="text" name="password" placeholder="Password">
+                    <form class="form -log">
+                        <input class="form-input -mail" minlength="3" type="text" name="mail" placeholder="E-mail" required>
+                        <input  class="form-input -password " minlength="3" type="text" name="password" placeholder="Password" required>
                         <button class="hide">Hide</button>
-                        <label class="check remember"><input type="checkbox" name="remember"> Remember me</label>
+                        <label class="check -remember"><input type="checkbox" name="remember"> Remember me</label>
                         <span class="error -mail">Uncorrect email</span>
-                        <span class="error -name">Uncorrect username</span>
-                        <input class="button-submit" type="button" value="Log in">
+                        <span class="error -password">Uncorrect password</span>
+                        <input class="button-submit" type="submit" value="Log in">
                     </form>
                     <a class="link -restorePass" href="#">Forgot your password?</a>
                 </div>
 
                 <div class="tab-item -registr">
                     <form class="form">
-                        <input class="form-input -name" minlength="3" type="text" name="name" placeholder="Username">
-                        <input id="pass1" class="form-input -password" minlength="3" type="text" name="password" placeholder="Password">
-                        <button class="hide">Hide</button>
-                        <input id="pass2" class="form-input -confirmPass" minlength="3" type="text" name="confirmPassword" placeholder="Confirm password">
+                        <input class="form-input -name" minlength="3" type="text" name="name" placeholder="Username" required>
+                        <input  class="form-input -password" minlength="3" type="text" name="password" placeholder="Password" required>
+                        <button class="hide -pass">Hide</button>
+                        <input  class="form-input -confirmPass" minlength="3" type="text" name="confirmPassword" placeholder="Confirm password" required>
                         <button class="hide -confirmPass">Hide</button>
-                        <input class="form-input -mail" type="text" name="login" placeholder="E-mail">
-                        <label class="check -agreeTerms"><input type="checkbox" name="remember"> I agree to the terms</label>
+                        <input class="form-input -mail" type="text" name="mail" placeholder="E-mail" required>
+                        <label class="check -agreeTerms"><input type="checkbox" name="agreeTerm" required> I agree to the terms</label>
                         <span class="error -mail">Uncorrect email</span>
                         <span class="error -password">Uncorrect password</span>
                         <span class="error -name">Uncorrect username</span>
-                        <input class="button-submit" type="button" value="Create account">
+                        <input class="button-submit" type="submit" value="Create account">
                     </form>
                 </div>
 
                 <div class="tab-item -restore">
                     <form class="form">
-                        <input class="form-input -mail" type="text" name="login" placeholder="E-mail">
+                        <input class="form-input -mail" type="text" name="mail" placeholder="E-mail" required>
                         <span class="error -mail">Uncorrect email</span>
-                        <input class="button-submit" type="button" value="Reset password">
+                        <input class="button-submit" type="submit" value="Reset password">
                     </form>
                     <a class="link -backToLog" href="#">Back to log-in</a>
                 </div>

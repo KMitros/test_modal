@@ -28,6 +28,7 @@
       display: block;
       position: absolute;
       height: 40px;
+      width: 43px;
       top: 92px;
       right: 30px;
       border: none;
@@ -35,14 +36,27 @@
       cursor: pointer;
     }
 
-    &.-repeatpass{
-      top: 156px
+    &:before{
+      height: 50%;
+      width: 0px;
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: -10px;
+      display: block;
+      border-left: 2px solid $border-color;
+      outline: none;
+    }
+
+    &.-confirmPass{
+      top: 154px
     }
   }
 
   > .button-submit{
     margin-bottom: 5px;
     padding: 10px 40px;
+    font-family: "Roboto",sans-serif;
     background-color: $button-bg;
     border: 1px solid darken($button-bg,2%);
     border-radius: 2px;

@@ -10,59 +10,81 @@ $(document).ready(function(){
         return false;
     });
 
+    $('form').submit(function(){
+        let currentForm = $(this);
+        console.log(currentForm);
+        let email = currentForm[0].mail;
+        let name = currentForm[0].name;
+        console.log(name);
+        let pass = currentForm[0].password;
+        let confirmPass = currentForm[0].confirmPassword;
 
-    $('.button-submit').click(function() {
-        let input = $(".form-input.-mail");
         let pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-        if(input.val() !== '') {
-            if(pattern.test(input.val())){
+
+        if(email.value !== '') {
+
+            if(pattern.test(email.value)){
+
                 $(".error.-mail").css({'display' : 'none'});
             }else{
                 $(".error.-mail").css({'display' : 'block'});
+                return false;
             };
         }else{
             $(".error.-mail").css({'display' : 'block'});
+            return false;
         };
-    });
 
-    $('.button-submit').click(function() {
-        let input = $(".form-input.-name");
-        let pattern = /^([a-zA-Z]{1})[a-zA-Z0-9-_\.]{2,20}$/;
-        if(input.val() !== '') {
-            if(pattern.test(input.val())){
-                $(".error.-name").css({'display' : 'none'});
+        if(name != undefined){
+
+            let pattern = /^([a-zA-Z]{1})[a-zA-Z0-9-_\.]{2,20}$/;
+
+            if(name.value !== '') {
+                if(pattern.test(name.value)){
+                    $(".error.-name").css({'display' : 'none'});
+                }else{
+                    $(".error.-name").css({'display' : 'block'});
+                    return false
+                };
             }else{
                 $(".error.-name").css({'display' : 'block'});
+                return false;
             };
-        }else{
-            $(".error.-name").css({'display' : 'block'});
         };
-    });
 
-    $('.button-submit').click(function() {
+        if(pass != undefined){
 
-        let pass = document.getElementById('pass1');
-        let confirmPass = document.getElementById('pass2');
-        let pattern = /^(?=.*[A-Za-z])(?=.*\d).{3,18}$/;
-        console.log(pattern.test(pass.value));
-        if(pattern.test(pass.value)) {
-            if(pass.value === confirmPass.value){
-                $(".error.-password").css({'display' : 'none'});
+            let pattern = /^(?=.*[A-Za-z])(?=.*\d).{3,18}$/;
+            if(pattern.test(pass.value)) {
+                if(pass != undefined && confirmPass != undefined){
+                    if(pass.value === confirmPass.value){
+                        $(".error.-password").css({'display' : 'none'});
+                    }else{
+                        $(".error.-password").css({'display' : 'block'});
+                        return false;
+                    }
+                }
             }else{
                 $(".error.-password").css({'display' : 'block'});
-            }
-        }else{
-            $(".error.-password").css({'display' : 'block'});
-        };
+                return false;
+            };
+        }
+
     });
 
 
-
-    $('.hide').click(function(){
+    $('.hide.-pass').click(function(){
         let type = $('.form-input.-password').attr('type') == "text" ? "password" : 'text',
             c = $(this).text() == "Hide" ? "Show" : "Hide";
         $(this).text(c);
         $('.form-input.-password').prop('type', type);
+    });
+
+    $('.hide.-confirmPass').click(function(){
+        let type = $('.form-input.-confirmPass').attr('type') == "text" ? "password" : 'text',
+            c = $(this).text() == "Hide" ? "Show" : "Hide";
+        $(this).text(c);
+        $('.form-input.-confirmPass').prop('type', type);
     });
 
 
@@ -101,8 +123,5 @@ $(document).ready(function(){
         $(".tab.-signIn").toggleClass('active');
         $(".tab-item.-logIn").toggleClass('active');
     });
-
-
-
 
 });
